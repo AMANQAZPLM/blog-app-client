@@ -23,11 +23,11 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8800/api/auth/register", inputs);
-      // await axios.post(
-      //   "https://lamablog-lvpw.onrender.com/api/auth/register",
-      //   inputs
-      // );
+      // await axios.post("http://localhost:8800/api/auth/register", inputs);
+      await axios.post(
+        "https://lamablog-lvpw.onrender.com/api/auth/register",
+        inputs
+      );
       navigate("/login");
     } catch (err) {
       setError(err.response.data);
